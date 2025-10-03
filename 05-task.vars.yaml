@@ -9,6 +9,6 @@
     - name: print task level variable
       vars: 
        course: devsecops
-       ansible.builtin.debug:
-       msg: "Course name is: {{ course }}, duration is: {{ duration }}, trainer is:{{ trainer }}"
+      ansible.builtin.debug:
+        msg: "Course name is: {{ course }}, duration is: {{ duration }}, trainer is:{{ trainer }}"
 
