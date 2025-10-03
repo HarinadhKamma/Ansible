@@ -2,12 +2,12 @@
 - name: play-01
   hosts: node
   tasks:
-    - name: play-01 and Task-01
-      ansible.builtin.debug:
-      msg: "Hello play-01 and Task-01"
+   - name: play-01 and Task-01
+     ansible.builtin.debug:
+       msg: "Hello play-01 and Task-01"
 
-    - name: play-01 and Task-02
-      ansible.builtin.debug:
+   - name: play-01 and Task-02
+     ansible.builtin.debug:
       msg: "Hello play-01 and Task-02"
 
 - name: play-02
@@ -17,6 +17,6 @@
       ansible.builtin.debug:
       msg: "Hello play-02 and Task-01"
 
-    - name: play-02 and Task-01
+    - name: play-02 and Task-02
       ansible.builtin.debug:
       msg: "Hello play-01 and Task-02"
