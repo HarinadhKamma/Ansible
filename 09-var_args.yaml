@@ -6,3 +6,6 @@
    - name : read values from inventory
      ansible.builtin.debug:
       msg: "Course is : {{ COURSE }} , Duration is : {{ DURATION }}, Trainer is :{{ TRAINER }}"
+
+     # Command line way to pass the arguments
+     # ansible-playbook -i inventory.ini -e COURSE="Devops" -e DURATION="Duration" -e TRAINER="Trainer" 09-var_args.yaml

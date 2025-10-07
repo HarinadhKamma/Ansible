@@ -1,0 +1,19 @@
+---
+- name: datatypes print
+  hosts: local
+  connection: local
+  vars:
+   Course: devsecops
+   Duration: 10
+   is_live: true
+   topics:
+   - Kubernetes
+   - cicd
+   - docker
+  traininfo:
+   monday: jenkins
+   tuesday: shell
+   tasks:
+    - name: print the datatypes info
+      ansible.buitin.debug:
+       msg: "course is: {{ Courser }}, Duration is : {{ DDuration }}, is_live:{{ is_live }}, topics covered: {{ topics }}, traininfo:{{ traininfo }}"
