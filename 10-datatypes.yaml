@@ -10,9 +10,9 @@
    - Kubernetes
    - cicd
    - docker
-  traininfo:
-   monday: jenkins
-   tuesday: shell
+   traininfo:
+    monday: jenkins
+    tuesday: shell
    tasks:
     - name: print the datatypes info
       ansible.buitin.debug:
