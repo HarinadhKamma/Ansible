@@ -1,6 +1,7 @@
 ---
 - name: validate user to exist or not 
   hosts: local
+  become: yes
   connection: local
 
   tasks:
