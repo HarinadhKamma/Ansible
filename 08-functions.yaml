@@ -53,5 +53,5 @@
         msg: "lowercase value is:{{ gmail | lower}}"
 
     - name: validate ipv4 addresses
-      ansible.builtin.set_fact:
-        data: "{{ ipaddr is ansible.utils.ipv4 }}"
+      ansible.builtin.debug:
+        msg: "{{ ipaddr is ansible.utils.ipv4 }}"
