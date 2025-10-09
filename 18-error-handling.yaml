@@ -1,0 +1,15 @@
+---
+- name: validate user to exist or not 
+  hosts: local
+  connection: local
+  tasks:
+   - name : create user if nt exists
+     ansible.builtin.command: id roboshop
+     register: output
+     ignore_errors: true
+
+   - name: print the user type
+     ansible.builtin.debug:
+      msg: {{ output }}
+
+  
