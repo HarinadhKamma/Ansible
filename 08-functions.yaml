@@ -8,6 +8,11 @@
    maptolist: 
     application: Payment
     environment: Dev
+  listtomap:
+   - key: application
+     value: Payment
+   - key: Env
+     value: prd
   tasks: 
     - name: print the name with default
       ansible.builtin.debug:
@@ -19,3 +24,7 @@
     - name: print the map to list values
       ansible.builtin.debug:
         msg: "MaptoList values are: {{ maptolist | dict2items }}"
+         #"MaptoList values are: [{'key': 'application', 'value': 'Payment'}, {'key': 'environment', 'value': 'Dev'}]"
+    - name: print the list to map values
+      ansible.builtin.debug:
+        msg: "list to map values are: {{ listtomap | items2dict}}"
