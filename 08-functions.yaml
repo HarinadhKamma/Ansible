@@ -1,8 +1,8 @@
 ---
-- name: functions
+- name: default function 
   hosts: local
   connection: local
-  tasks:
-   - name: default functions
-     ansible.builtin.debug:
-     msg: "hello ,{{ name | default('hari') }}"
+  tasks: 
+    - name: print the name with default
+      ansible.builtin.debug:
+        msg: "Default variable name is: {{ name | default('hari') }}"
