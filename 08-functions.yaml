@@ -8,11 +8,11 @@
    maptolist: 
     application: Payment
     environment: Dev
-  listtomap:
-   - key: application
-     value: Payment
-   - key: Env
-     value: prd
+    listtomap:
+    - key: application
+      value: Payment
+    - key: Env
+      value: prd
   tasks: 
     - name: print the name with default
       ansible.builtin.debug:
