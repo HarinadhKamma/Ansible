@@ -5,7 +5,7 @@
   vars:
    technologies: Ansible,AWS,Terraform # string
    gmail: HARINADHKAMMA@GMAIL.COM
-   ipaddr: 127.0.0.1
+   ipaddr: 1999127.0.0.1
    #dictonary = map
    maptolist: 
     application: Payment
