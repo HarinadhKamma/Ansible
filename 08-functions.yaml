@@ -44,4 +44,4 @@
     - name: save json info to file 
       ansible.builtin.copy:
          dest: ./sample_data.json
-         content: "{{ student_yaml | to_json }}"
+         content: "{{ student_yaml | to_nice_json }}"
