@@ -18,4 +18,4 @@
         # output => ['Ansible' ,'AWS', 'Terraform']
     - name: print the map to list values
       ansible.builtin.debug:
-        msg: "MaptoList values are:{{ maptolist | dic2items}}"
+        msg: "MaptoList values are:{{ maptolist | dic2items }}"
