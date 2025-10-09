@@ -10,7 +10,7 @@
         msg: "Default variable name is: {{ name | default('hari') }}"
     - name: print the list values
       ansible.builtin.debug:
-        msg: "List values are: {{ technologies | split(,)}}" # convert string to a list by using split fucntion and convert to a list
+        msg: "List values are: {{ technologies | split(',')}}" # convert string to a list by using split fucntion and convert to a list
         # output => ["Ansible ,"AWS", "Terraform"]
         # # listjojo => [ "jojo", "is", "a" ]
         # listjojo: "{{ 'jojo is a' | split }}"
