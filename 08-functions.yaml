@@ -54,4 +54,4 @@
 
     - name: validate ipv4 addresses
       ansible.builtin.set_fact:
-      data: "{{ ipaddr is ansible.utils.ipv4 }}"
+        data: "{{ ipaddr is ansible.utils.ipv4 }}"
