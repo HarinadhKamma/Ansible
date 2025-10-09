@@ -17,21 +17,31 @@
     - name: print the name with default
       ansible.builtin.debug:
         msg: "Default variable name is: {{ name | default('hari') }}"
+
     - name: print the list values
       ansible.builtin.debug:
         msg: "List values are: {{ technologies | split(',')}}" # convert string to a list by using split fucntion and convert to a list
         # output => ['Ansible' ,'AWS', 'Terraform']
+
     - name: print the map to list values
       ansible.builtin.debug:
         msg: "MaptoList values are: {{ maptolist | dict2items }}"
          #"MaptoList values are: [{'key': 'application', 'value': 'Payment'}, {'key': 'environment', 'value': 'Dev'}]"
+
     - name: print the list to map values
       ansible.builtin.debug:
         msg: "list to map values are: {{ listtomap | items2dict}}"
         #"list to map values are: {'application': 'Payment', 'Env': 'prd'}"
+
     - name: read yaml and take it into a variable
       ansible.builtin.set_fact:
         student_yaml: "{{ lookup('file', 'student.yaml'| from_yaml )}}"
+
     - name: converts the yaml to json
       ansible.builtin.debug:
         msg: "print the json: {{ student_yaml | to_json }}"
+
+    - name: save json info to file 
+      ansible.builtin.copy:
+         dest: "./sample_data.json"
+         content: "{{ student_yaml | to_json }}"
