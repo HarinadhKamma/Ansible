@@ -3,7 +3,11 @@
   hosts: local
   connection: local
   vars:
-   technologies: Ansible,AWS,Terraform
+   technologies: Ansible,AWS,Terraform # string
+   #dictonary = map
+   maptolist: 
+    application: Payment
+    environment: Dev
   tasks: 
     - name: print the name with default
       ansible.builtin.debug:
@@ -11,9 +15,7 @@
     - name: print the list values
       ansible.builtin.debug:
         msg: "List values are: {{ technologies | split(',')}}" # convert string to a list by using split fucntion and convert to a list
-        # output => ["Ansible ,"AWS", "Terraform"]
-        # # listjojo => [ "jojo", "is", "a" ]
-        # listjojo: "{{ 'jojo is a' | split }}"
-
-        # # listjojocomma => [ "jojo is", " a" ]
-        # listjojocomma: "{{ 'jojo is, a' | split(',') }}"
+        # output => ['Ansible' ,'AWS', 'Terraform']
+    - name: print the map to list values
+      ansible.builtin.debug:
+        msg: "MaptoList values are:{{ maptolist | dic2items}}"
