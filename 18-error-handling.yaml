@@ -7,7 +7,7 @@
    - name : create user if nt exists
      ansible.builtin.command: id roboshop
      register: output
-    # ignore_errors: true
+     ignore_errors: true
 
    - name: print the user type
      ansible.builtin.debug:
